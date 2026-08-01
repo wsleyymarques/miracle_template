@@ -1,0 +1,31 @@
+export enum ErrorCodes {
+  USER_NOT_FOUND = 'USER_NOT_FOUND',
+  USER_EMAIL_DUPLICATE = 'USER_EMAIL_DUPLICATE',
+  USER_INACTIVE = 'USER_INACTIVE',
+  INVALID_CREDENTIALS = 'INVALID_CREDENTIALS',
+  TOKEN_INVALID = 'TOKEN_INVALID',
+  INVALID_REFRESH_TOKEN = 'INVALID_REFRESH_TOKEN',
+  ROLE_NOT_ALLOWED = 'ROLE_NOT_ALLOWED',
+  PERMISSION_NOT_ALLOWED = 'PERMISSION_NOT_ALLOWED',
+  FORBIDDEN_ACTION = 'FORBIDDEN_ACTION',
+  VALIDATION_FAILED = 'VALIDATION_FAILED',
+  ROLE_NOT_FOUND = 'ROLE_NOT_FOUND',
+  PERMISSION_NOT_FOUND = 'PERMISSION_NOT_FOUND',
+  RESOURCE_NOT_FOUND = 'RESOURCE_NOT_FOUND',
+}
+
+export const ERROR_MESSAGES: Record<ErrorCodes, string> = {
+  [ErrorCodes.USER_NOT_FOUND]: 'Usuário não encontrado',
+  [ErrorCodes.USER_EMAIL_DUPLICATE]: 'E-mail já cadastrado',
+  [ErrorCodes.USER_INACTIVE]: 'Usuário inativo',
+  [ErrorCodes.INVALID_CREDENTIALS]: 'Credenciais inválidas',
+  [ErrorCodes.TOKEN_INVALID]: 'Token inválido',
+  [ErrorCodes.INVALID_REFRESH_TOKEN]: 'Token de atualização inválido ou expirado',
+  [ErrorCodes.ROLE_NOT_ALLOWED]: 'Perfil não permitido para esta ação',
+  [ErrorCodes.PERMISSION_NOT_ALLOWED]: 'Permissão não permitida para esta ação',
+  [ErrorCodes.FORBIDDEN_ACTION]: 'Ação não permitida',
+  [ErrorCodes.VALIDATION_FAILED]: 'Dados inválidos informados',
+  [ErrorCodes.ROLE_NOT_FOUND]: 'Perfil não encontrado',
+  [ErrorCodes.PERMISSION_NOT_FOUND]: 'Permissão não encontrada',
+  [ErrorCodes.RESOURCE_NOT_FOUND]: 'Recurso não encontrado',
+};
