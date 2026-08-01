@@ -17,7 +17,7 @@ if (fs.existsSync(targetDir)) {
   process.exit(1);
 }
 
-const sourceDir = path.join(__dirname, '..', 'backend');
+const sourceDir = path.join(__dirname, '..', 'templates', 'backend');
 
 if (!fs.existsSync(sourceDir)) {
   console.error('Backend template directory not found.');
