@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../prisma/prisma.service';
+import { IPasswordResetCodeRepository } from './interfaces/repository.interface';
 
 @Injectable()
-export class PasswordResetCodeRepository {
+export class PasswordResetCodeRepository implements IPasswordResetCodeRepository {
   constructor(private readonly prisma: PrismaService) {}
 
   private get prismaClient(): any {

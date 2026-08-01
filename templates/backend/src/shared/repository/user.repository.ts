@@ -1,11 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { ListQueryDto } from '../../common/dto/list-query.dto';
 import { PrismaService } from '../../prisma/prisma.service';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
+import { CreateUserDto } from '../../modules/user/dto/create-user.dto';
+import { UpdateUserDto } from '../../modules/user/dto/update-user.dto';
+import { IUserRepository } from './interfaces/repository.interface';
 
 @Injectable()
-export class UserRepository {
+export class UserRepository implements IUserRepository {
   constructor(private readonly prisma: PrismaService) {}
 
   private get prismaClient(): any {

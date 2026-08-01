@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../prisma/prisma.service';
+import { IRefreshTokenRepository } from './interfaces/repository.interface';
 
 @Injectable()
-export class RefreshTokenRepository {
+export class RefreshTokenRepository implements IRefreshTokenRepository {
   constructor(private readonly prisma: PrismaService) {}
 
   private get prismaClient(): any {

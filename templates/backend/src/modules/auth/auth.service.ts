@@ -12,7 +12,7 @@ import { MAIL_SERVICE } from '../../common/mail/mail.service';
 import type { MailService } from '../../common/mail/mail.service';
 import { UserMapper } from '../user/user.mapper';
 import { UserService } from '../user/user.service';
-import { UserRoleRepository } from '../user-role/user-role.repository';
+import { UserRoleRepository } from '../../shared/repository/user-role.repository';
 
 function addMinutes(date: Date, minutes: number): Date {
   const next = new Date(date);
@@ -24,8 +24,8 @@ import { LoginDto } from './dto/login.dto';
 import { RefreshTokenDto } from './dto/refresh-token.dto';
 import { ResetPasswordDto } from './dto/reset-password.dto';
 import type { JwtPayload } from './interfaces/jwt-payload.interface';
-import { PasswordResetCodeRepository } from './password-reset-code.repository';
-import { RefreshTokenRepository } from './refresh-token.repository';
+import { PasswordResetCodeRepository } from '../../shared/repository/password-reset-code.repository';
+import { RefreshTokenRepository } from '../../shared/repository/refresh-token.repository';
 
 @Injectable()
 export class AuthService {

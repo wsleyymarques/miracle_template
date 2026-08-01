@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../prisma/prisma.service';
-import { CreateUserRoleDto } from './dto/create-user-role.dto';
+import { CreateUserRoleDto } from '../../modules/user-role/dto/create-user-role.dto';
+import { IUserRoleRepository } from './interfaces/repository.interface';
 
 @Injectable()
-export class UserRoleRepository {
+export class UserRoleRepository implements IUserRoleRepository {
   constructor(private readonly prisma: PrismaService) {}
 
   private get prismaClient(): any {

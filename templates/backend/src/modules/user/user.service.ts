@@ -10,7 +10,7 @@ import { ChangePasswordDto } from './dto/change-password.dto';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UserMapper } from './user.mapper';
-import { UserRepository } from './user.repository';
+import { UserRepository } from '../../shared/repository/user.repository';
 
 @Injectable()
 export class UserService {

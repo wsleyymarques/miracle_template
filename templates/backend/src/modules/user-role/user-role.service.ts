@@ -7,7 +7,7 @@ import { RoleService } from '../role/role.service';
 import { UserService } from '../user/user.service';
 import { CreateUserRoleDto } from './dto/create-user-role.dto';
 import { UserRoleMapper } from './user-role.mapper';
-import { UserRoleRepository } from './user-role.repository';
+import { UserRoleRepository } from '../../shared/repository/user-role.repository';
 
 @Injectable()
 export class UserRoleService {

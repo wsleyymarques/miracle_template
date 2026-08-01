@@ -1,11 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { ListQueryDto } from '../../common/dto/list-query.dto';
 import { PrismaService } from '../../prisma/prisma.service';
-import { CreateRoleDto } from './dto/create-role.dto';
-import { UpdateRoleDto } from './dto/update-role.dto';
+import { CreateRoleDto } from '../../modules/role/dto/create-role.dto';
+import { UpdateRoleDto } from '../../modules/role/dto/update-role.dto';
+import { IRoleRepository } from './interfaces/repository.interface';
 
 @Injectable()
-export class RoleRepository {
+export class RoleRepository implements IRoleRepository {
   constructor(private readonly prisma: PrismaService) {}
 
   private get prismaClient(): any {
