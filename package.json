@@ -1,0 +1,19 @@
+{
+  "name": "create-miracle-backend",
+  "version": "1.0.0",
+  "description": "CLI scaffold to create a new backend project from the Miracle template.",
+  "private": false,
+  "type": "commonjs",
+  "bin": {
+    "create-miracle-backend": "./bin/create.js"
+  },
+  "files": [
+    "bin",
+    "backend",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT"
+}
