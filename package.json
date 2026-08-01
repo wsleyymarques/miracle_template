@@ -5,15 +5,30 @@
   "private": false,
   "type": "commonjs",
   "bin": {
-    "create-miracle-backend": "./bin/create.js"
+    "create-miracle-backend": "bin/create.js"
   },
   "files": [
     "bin",
-    "backend",
+    "templates",
     "README.md"
   ],
   "scripts": {
     "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "boilerplate",
+    "nestjs",
+    "backend",
+    "scaffold",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsleyymarques/miracle_template.git"
+  },
+  "homepage": "https://github.com/wsleyymarques/miracle_template",
+  "bugs": {
+    "url": "https://github.com/wsleyymarques/miracle_template/issues"
   },
   "license": "MIT"
 }
